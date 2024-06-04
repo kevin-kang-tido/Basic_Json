@@ -1,20 +1,19 @@
 export const Cardcomponent = (product) => {
     const {
-        image,
-        title,
-        price,
-        rating:{rate}
+        mainImage,
+        name,
+        price:{minPrice},
     } = product;
     return `
     <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
         <img class="p-8 rounded-t-lg h-[200px] w-auto object-cover" src="${
-                image ||"../assets/placeholder-1.webp"}"alt="product image" />
+         mainImage ||"../assets/placeholder-1.webp"}"alt="product image" />
     </a>
     <div class="px-5 pb-5">
         <a href="#">
             <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">${
-                title || "No product title"
+                name || "No product title"
             }</h5>
         </a>
         <div class="flex items-center mt-2.5 mb-5">
